@@ -1,6 +1,9 @@
 package conta;
 
+import java.io.IOException;
+import java.util.InputMismatchException;
 import java.util.Scanner;
+
 import conta.model.ContaCorrente;
 import conta.model.ContaPoupanca;
 import conta.util.Cores;
@@ -13,19 +16,15 @@ public class Menu {
 
 		int opcao;
 
-		ContaCorrente cc1 = new ContaCorrente(2, 123, 1, "Cristiano Messi", 15000.0f, 1000.0f);
-		cc1.visualizar();
-		cc1.sacar(12000.0f);
-		cc1.visualizar();
-		cc1.depositar(5000.0f);
-		cc1.visualizar();
-
-		ContaPoupanca cp1 = new ContaPoupanca(3, 123, 2, "Maiara Maraira", 100000.0f, 15);
-		cp1.visualizar();
-		cp1.sacar(1000.0f);
-		cp1.visualizar();
-		cp1.depositar(5000.0f);
-		cp1.visualizar();
+		
+		  ContaCorrente cc1 = new ContaCorrente(2, 123, 1, "Cristiano Messi", 15000.0f,
+		  1000.0f); cc1.visualizar(); cc1.sacar(12000.0f); cc1.visualizar();
+		  cc1.depositar(5000.0f); cc1.visualizar();
+		  
+		  ContaPoupanca cp1 = new ContaPoupanca(3, 123, 2, "Maiara Maraira", 100000.0f,
+		  15); cp1.visualizar(); cp1.sacar(1000.0f); cp1.visualizar();
+		  cp1.depositar(5000.0f); cp1.visualizar();
+		 
 
 		while (true) {
 
@@ -46,7 +45,15 @@ public class Menu {
 			System.out.println("Entre com a opcao desejada:                          ");
 			System.out.println("                                                     " + Cores.TEXT_RESET);
 
-			opcao = read.nextInt();
+			try {
+
+				opcao = read.nextInt();
+
+			} catch (InputMismatchException e) {
+				System.out.println("\nDigite valores inteiros!");
+				read.nextLine();
+				opcao = 0;
+			}
 
 			if (opcao == 9) {
 				System.out.println(Cores.TEXT_WHITE_BOLD + "\nBanco do Brazil com Z - O seu Futuro começa aqui!");
@@ -57,38 +64,40 @@ public class Menu {
 			switch (opcao) {
 			case 1:
 				System.out.println(Cores.TEXT_WHITE_BOLD + "Criar Conta\n\n");
+				keyPress(); 
 
 				break;
 			case 2:
 				System.out.println(Cores.TEXT_WHITE_BOLD + "Listar todas as Contas\n\n");
-
+				keyPress();
 				break;
 			case 3:
 				System.out.println(Cores.TEXT_WHITE_BOLD + "Consultar dados da Conta - por número\n\n");
-
+				keyPress();
 				break;
 			case 4:
 				System.out.println(Cores.TEXT_WHITE_BOLD + "Atualizar dados da Conta\n\n");
-
+				keyPress();
 				break;
 			case 5:
 				System.out.println(Cores.TEXT_WHITE_BOLD + "Apagar a Conta\n\n");
-
+				keyPress();
 				break;
 			case 6:
 				System.out.println(Cores.TEXT_WHITE_BOLD + "Saque\n\n");
-
+				keyPress();
 				break;
 			case 7:
 				System.out.println(Cores.TEXT_WHITE_BOLD + "Depósito\n\n");
-
+				keyPress();
 				break;
 			case 8:
 				System.out.println(Cores.TEXT_WHITE_BOLD + "Transferência entre Contas\n\n");
-
+				keyPress();
 				break;
 			default:
 				System.out.println(Cores.TEXT_RED_BOLD + "\nOpção Inválida!\n");
+				keyPress();
 				break;
 			}
 		}
@@ -100,5 +109,14 @@ public class Menu {
 		System.out.println("Generation Brasil - ");
 		System.out.println("github.com/");
 		System.out.println("*********************************************************");
+	}
+
+	public static void keyPress() {
+		try {
+			System.out.println(Cores.TEXT_RESET + "\n\nPressione 'Enter' para Contuar...");
+			System.in.read();
+		} catch (IOException e) {
+			System.out.println("Você pressinou uma tecla diferente de enter!");
+		}
 	}
 }

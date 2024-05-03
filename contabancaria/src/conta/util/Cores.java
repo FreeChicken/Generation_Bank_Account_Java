@@ -2,10 +2,10 @@ package conta.util;
 
 public class Cores {
 
-		//Reset Color
+		
 		public static final String TEXT_RESET = "\u001B[0m";
 
-		//Text Color
+		
 		public static final String TEXT_BLACK = "\u001B[30m";
 		public static final String TEXT_RED = "\u001B[31m";
 		public static final String TEXT_GREEN = "\u001B[32m";
@@ -15,7 +15,7 @@ public class Cores {
 		public static final String TEXT_CYAN = "\u001B[36m";
 		public static final String TEXT_WHITE = "\u001B[37m";
 
-		//Text Color Bold
+		
 		public static final String TEXT_BLACK_BOLD = "\033[1;30m";
 		public static final String TEXT_RED_BOLD = "\033[1;31m";
 		public static final String TEXT_GREEN_BOLD = "\033[1;32m";
@@ -25,7 +25,7 @@ public class Cores {
 		public static final String TEXT_CYAN_BOLD = "\033[1;36m";
 		public static final String TEXT_WHITE_BOLD = "\033[1;37m";
 
-		//Reset Text Underline
+		
 		public static final String TEXT_BLACK_UNDERLINED = "\033[4;30m"; 
 		public static final String TEXT_RED_UNDERLINED = "\033[4;31m"; 
 		public static final String TEXT_GREEN_UNDERLINED = "\033[4;32m"; 
@@ -35,7 +35,7 @@ public class Cores {
 		public static final String TEXT_CYAN_UNDERLINED = "\033[4;36m"; 
 		public static final String TEXT_WHITE_UNDERLINED = "\033[4;37m"; 
 				
-		// Text Color High Intensity
+		
 		public static final String TEXT_BLACK_BRIGHT = "\033[0;90m";  
 		public static final String TEXT_RED_BRIGHT = "\033[0;91m";    
 		public static final String TEXT_GREEN_BRIGHT = "\033[0;92m";  
@@ -45,7 +45,7 @@ public class Cores {
 		public static final String TEXT_CYAN_BRIGHT = "\033[0;96m";   
 		public static final String TEXT_WHITE_BRIGHT = "\033[0;97m";  
 
-		// Text Color Bold High Intensity
+		
 		public static final String TEXT_BLACK_BOLD_BRIGHT = "\033[1;90m"; 
 		public static final String TEXT_RED_BOLD_BRIGHT = "\033[1;91m";   
 		public static final String TEXT_GREEN_BOLD_BRIGHT = "\033[1;92m"; 
@@ -55,7 +55,7 @@ public class Cores {
 		public static final String TEXT_CYAN_BOLD_BRIGHT = "\033[1;96m";  
 		public static final String TEXT_WHITE_BOLD_BRIGHT = "\033[1;97m"; 
 
-		// Background Color
+		
 		public static final String ANSI_BLACK_BACKGROUND = "\u001B[40m";
 		public static final String ANSI_RED_BACKGROUND = "\u001B[41m";
 		public static final String ANSI_GREEN_BACKGROUND = "\u001B[42m";
@@ -65,7 +65,7 @@ public class Cores {
 		public static final String ANSI_CYAN_BACKGROUND = "\u001B[46m";
 		public static final String ANSI_WHITE_BACKGROUND = "\u001B[47m";
 				
-		// Background Color High Intensity
+		
 		public static final String ANSI_BLACK_BACKGROUND_BRIGHT = "\033[0;100m";
 		public static final String ANSI_RED_BACKGROUND_BRIGHT = "\033[0;101m";
 		public static final String ANSI_GREEN_BACKGROUND_BRIGHT = "\033[0;102m";

@@ -13,7 +13,7 @@ public class ContaPoupanca extends Conta {
 		return aniversario;
 	}
 
-	public void setLimite(int aniversario) {
+	public void setAniversario(int aniversario) {
 		this.aniversario = aniversario;
 	}
 

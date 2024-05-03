@@ -8,9 +8,9 @@ public interface ContaRepository {
 
 	public void listarTodas();
 
-	public void cadastrar();
+	public void cadastrar(Conta conta);
 
-	public void atualizar();
+	public void atualizar(Conta conta);
 
 	public void deletar(int numero);
 
