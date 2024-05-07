@@ -70,6 +70,19 @@ public abstract class Conta {
 	public void depositar(float valor) {
 		this.setSaldo(this.getSaldo() + valor);
 	}
+	
+	//Adiçoes de código para persitencia de dados em .txt
+	public String toString() {
+	    if (this instanceof ContaCorrente) {
+	        ContaCorrente cc = (ContaCorrente) this;
+	        return cc.getNumero() + ";" + cc.getAgencia() + ";" + cc.getTipo() + ";" + cc.getTitular() + ";" + cc.getSaldo() + ";" + cc.getLimite();
+	    } else if (this instanceof ContaPoupanca) {
+	        ContaPoupanca cp = (ContaPoupanca) this;
+	        return cp.getNumero() + ";" + cp.getAgencia() + ";" + cp.getTipo() + ";" + cp.getTitular() + ";" + cp.getSaldo() + ";" + cp.getAniversario();
+	    } else {
+	        return ""; 
+	    }
+	}
 
 	public void visualizar() {
 		String tipo = "";
@@ -78,7 +91,7 @@ public abstract class Conta {
 			tipo = "Conta Corrente";
 			break;
 		case 2:
-			tipo = "Conta Corrente";
+			tipo = "Conta Poupanca";
 			break;
 		}
 

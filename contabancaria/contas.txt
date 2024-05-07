@@ -1,0 +1,4 @@
+1;123;1;Flavinho do Pneu;18000.0;1000.0
+2;456;2;Hebert Richard ;8550.0;15
+3;789;2;Maiara Maraira;80000.0;4
+4;321;1;Irineu ;20.0;50.0
